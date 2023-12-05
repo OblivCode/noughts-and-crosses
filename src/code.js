@@ -10,8 +10,9 @@ function log(text) {
 
 function check_win(plr_text) {
   log("Checking win for "+plr_text);
-
+  //format the 'plr_text' properly just in case
   plr_text = plr_text.toUpperCase().trim();
+  //the only cell combinations possible for a win
   let winning_cells = [
     [1,2,3],
     [1,5,9],
@@ -26,7 +27,8 @@ function check_win(plr_text) {
 
     [7,8,9],
   ]
-
+  //loop through the winning cell combinations
+  //if a winning combination is found then return 'true'
   for (var i = 0; i < winning_cells.length; i++)	  	   	       	  	  	       	  	
   {	  	
     let cells = winning_cells[i];  
